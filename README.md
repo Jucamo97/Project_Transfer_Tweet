@@ -1,5 +1,4 @@
 # TransferMarket Scraper & Twitter Bot 
-Juan Camilo Montoya
 
 ## Description
 
