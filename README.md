@@ -1,4 +1,4 @@
-# TransferMarket Scraper & Twitter Bot 
+# TransferMarket Scraper
 
 ## Description
 
@@ -19,19 +19,6 @@ Before running the script, make sure you have the following installed:
 - Python 3.x
 - Selenium
 - Tweepy
-
-Install the required dependencies using the following command:
-
-```bash
-pip install selenium tweepy
-```
-
-Additionally, you need to have the appropriate web driver for Selenium. Download the appropriate driver for your browser and update the `PATH` variable in the script accordingly.
-
-## Configuration
-
-1. Set up a Twitter Developer account and create an app to obtain API keys and access tokens.
-2. Replace the placeholders in the `config.py` file with your TransferMarket URL and Twitter API credentials.
 
 ## Disclaimer
 
