@@ -64,7 +64,7 @@ data = get_data()
 #Checker
 Tweet = []
 
-temporal = pd.read_csv('initial.csv')
+temporal = pd.read_csv('Project_Transfer_Tweet/initial.csv')
 temporal = temporal.to_dict(orient='records')
 
 for x in data:
@@ -75,7 +75,7 @@ for x in data:
         print('Record already exists')
 
 temporal = pd.DataFrame(temporal)
-temporal.to_csv('initial.csv',index=False)
+temporal.to_csv('Project_Transfer_Tweet/initial.csv',index=False)
 
 #Check if there are tweets
 if len(Tweet) > 0:
