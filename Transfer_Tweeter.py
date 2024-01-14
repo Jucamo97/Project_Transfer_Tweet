@@ -10,6 +10,7 @@ import time
 #Driver Settings
 options = webdriver.ChromeOptions()
 options.add_argument('--start-maximized')
+#options.add_argument("--headless")
 options.add_argument('--disable-extensions')
 options.add_argument("--disable-dev-shm-usage");
 options.add_argument("--disable-renderer-backgrounding");
@@ -26,6 +27,8 @@ options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
 driver = webdriver.Chrome(options= options)
 driver.get('https://www.transfermarkt.co/liga-dimayor-apertura/letztetransfers/wettbewerb/COLP/plus/1')
+
+driver.get_screenshot_as_file("screenshot1.png")
 
 time.sleep(8)
 
