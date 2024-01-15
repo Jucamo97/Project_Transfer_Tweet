@@ -6,29 +6,30 @@ from selenium.webdriver.common.by import By
 import pandas as pd
 import tweepy
 import time
+from seleniumbase import Driver
 
-#Driver Settings
-options = webdriver.ChromeOptions()
-options.add_argument('--start-maximized')
-#options.add_argument("--headless")
-options.add_argument('--disable-extensions')
-options.add_argument("--disable-dev-shm-usage");
-options.add_argument("--disable-renderer-backgrounding");
-options.add_argument("--disable-background-timer-throttling");
-options.add_argument("--disable-backgrounding-occluded-windows");
-options.add_argument("--disable-client-side-phishing-detection");
-options.add_argument("--disable-crash-reporter");
-options.add_argument("--disable-oopr-debug-crash-dump");
-options.add_argument("--no-crash-upload");
-options.add_argument("--disable-gpu");
-options.add_argument("--disable-extensions");
-options.add_argument("--disable-low-res-tiling");
-options.add_experimental_option('excludeSwitches', ['enable-logging'])
+# #Driver Settings
+# options = webdriver.ChromeOptions()
+# options.add_argument('--start-maximized')
+# options.add_argument("--headless")
+# options.add_argument('--disable-extensions')
+# options.add_argument("--disable-dev-shm-usage");
+# options.add_argument("--disable-renderer-backgrounding");
+# options.add_argument("--disable-background-timer-throttling");
+# options.add_argument("--disable-backgrounding-occluded-windows");
+# options.add_argument("--disable-client-side-phishing-detection");
+# options.add_argument("--disable-crash-reporter");
+# options.add_argument("--disable-oopr-debug-crash-dump");
+# options.add_argument("--no-crash-upload");
+# options.add_argument("--disable-gpu");
+# options.add_argument("--disable-extensions");
+# options.add_argument("--disable-low-res-tiling");
+# options.add_experimental_option('excludeSwitches', ['enable-logging'])
 
-driver = webdriver.Chrome(options= options)
+#driver = webdriver.Chrome(options= options)
+
+driver = Driver(uc=True,headless=True)
 driver.get('https://www.transfermarkt.co/liga-dimayor-apertura/letztetransfers/wettbewerb/COLP/plus/1')
-
-driver.get_screenshot_as_file("screenshot1.png")
 
 time.sleep(8)
 
@@ -121,3 +122,5 @@ if len(Tweet) > 0:
             
 else:
     print('No news')
+
+driver.quit()
